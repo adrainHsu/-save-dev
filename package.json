@@ -1,19 +1,49 @@
 {
-  "name": "-save-dev",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src/index.js",
+  "name": "rollup-plugin-automatic-deployment",
+  "version": "1.0.1",
+  "description": "rollup自动化部署插件",
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "release": "tsc && npm publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adrainHsu/-save-dev.git"
+    "url": "git+https://github.com/adrainHsu/rollup-plugin-automatic-deployment.git"
   },
+  "keywords": [
+    "自动布署",
+    "自动化布署",
+    "自动化部署",
+    "rollup自动化部署插件",
+    "vite自动化部署插件",
+    "auto",
+    "upload",
+    "deploy",
+    "automatic",
+    "deployment",
+    "@rollup/plugin-automatic-deployment"
+  ],
   "author": "adrainHsu",
   "license": "MIT",
+  "files": [
+    "lib/*"
+  ],
   "bugs": {
-    "url": "https://github.com/adrainHsu/-save-dev/issues"
+    "url": "https://github.com/adrainHsu/rollup-plugin-automatic-deployment/issues"
   },
-  "homepage": "https://github.com/adrainHsu/-save-dev#readme"
+  "homepage": "https://github.com/adrainHsurollup-plugin-automatic-deployment#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/ssh2": "^1.11.13",
+    "@types/ssh2-streams": "^0.1.9",
+    "console-color-mr": "^2.0.2",
+    "node-ssh": "^13.1.0",
+    "rollup": "^3.27.0"
+  }
 }
